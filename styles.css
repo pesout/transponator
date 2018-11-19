@@ -1,0 +1,79 @@
+/*
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+************************
+*/
+body,
+article,
+h2,
+button,
+div,
+section {
+  font-family: sans-serif;
+}
+body {
+  background-color: #ddd;
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+}
+h2 {
+  font-size: 17pt;
+  font-weight: bold;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#chosen-chords {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+  border: 1px solid #888;
+  color: #fff;
+  background-color: #007FFF;
+}
+.chord-list button {
+  font-size: 13pt;
+  background-color: #007FFF;
+  border: 1px solid #888;
+  border-radius: 2px;
+  color: #fff;
+  padding: 7px;
+  width: 60px;
+  margin: 5px;
+  font-weight: bold;
+}
+.chord-list .ui-accordion-content {
+  text-align: center;
+}
+.chord-list .ui-accordion-header {
+  font-weight: bold;
+  font-size: 14pt;
+  background-color: #fff;
+}
+.chord-list .ui-accordion-header-active {
+  color: #fff;
+  background-color: #007FFF;
+}
+.transposition {
+  text-align: center;
+  margin-top: 10px;
+}
+.transposition button {
+  font-size: 14pt;
+  height: 50px;
+  width: 48%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  background-color: #007FFF;
+  border: 1px solid #888;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<!--
+mimimimimimimimi
+Created by Stepan Pesout
+mi**www.pesout.eumimi
+mimimimimimimimi
+-->
+
+<html>
+<head>
+	<meta http-equiv="Content-Language" content="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>TITLE</title>
+	<!-- <meta name="description" content="DELŠÍ POPIS">
+	<meta property="fb:admins" content="100001802478636">
+	<meta property="og:title" content="META TITLE">
+	<meta property="og:site_name" content="META TITLE">
+	<meta property="og:description" content="KRATŠÍ POPIS"> -->
+	<link rel="author" href="http://github.com/pesout">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<script src="scripts.js"></script>
+</head>
+<body>
+	<article>
+		<!-- <h2></h2> -->
+		<div id="chosen-chords">Vyberte akordy ze seznamu:</div>
+		<div class="chord-list">
+		 	<h3>Dur</h3>
+			<div>
+				<button onclick="addChord('D')">D</button>
+				<button onclick="addChord('G')">G</button>
+				<button onclick="addChord('A')">A</button>
+				<button onclick="addChord('E')">E</button>
+				<button onclick="addChord('C')">C</button>
+				<button onclick="addChord('F')">F</button>
+				<button onclick="addChord('H')">H</button>
+				<button onclick="addChord('B')">B</button>
+				<button onclick="addChord('C#')">C#</button>
+				<button onclick="addChord('F#')">F#</button>
+				<button onclick="addChord('D#')">D#</button>
+				<button onclick="addChord('G#')">G#</button>
+			</div>
+			<h3>Mol</h3>
+			<div>
+				<button onclick="addChord('Dmi')">Dmi</button>
+				<button onclick="addChord('Gmi')">Gmi</button>
+				<button onclick="addChord('Ami')">Ami</button>
+				<button onclick="addChord('Emi')">Emi</button>
+				<button onclick="addChord('Cmi')">Cmi</button>
+				<button onclick="addChord('Fmi')">Fmi</button>
+				<button onclick="addChord('Hmi')">Hmi</button>
+				<button onclick="addChord('Bmi')">Bmi</button>
+				<button onclick="addChord('C#mi')">C#mi</button>
+				<button onclick="addChord('F#mi')">F#mi</button>
+				<button onclick="addChord('D#mi')">D#mi</button>
+				<button onclick="addChord('G#mi')">G#mi</button>
+			</div>
+			<h3>7</h3>
+			<div>
+				<button onclick="addChord('D7')">D7</button>
+				<button onclick="addChord('G7')">G7</button>
+				<button onclick="addChord('A7')">A7</button>
+				<button onclick="addChord('E7')">E7</button>
+				<button onclick="addChord('C7')">C7</button>
+				<button onclick="addChord('F7')">F7</button>
+				<button onclick="addChord('H7')">H7</button>
+				<button onclick="addChord('B7')">B7</button>
+				<button onclick="addChord('C#7')">C#7</button>
+				<button onclick="addChord('F#7')">F#7</button>
+				<button onclick="addChord('D#7')">D#7</button>
+				<button onclick="addChord('G#7')">G#7</button>
+			</div>
+		</div>
+
+		<section class="transposition">
+			<button onclick="showTransposedChords()">Transponovat</button>
+			<button onclick="removeLastChord()">Smazat</button>
+		</section>
+
+		<section>
+			<div id="transposed-chords"></div>
+		</section>
+
+	</article>
+</body>
+</html>

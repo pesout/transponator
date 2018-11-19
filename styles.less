@@ -1,0 +1,87 @@
+/*
+************************
+Created by Stepan Pesout
+*****www.pesout.eu******
+************************
+*/
+
+@first-color: #007FFF;
+@second-color: #ddd;
+@text-color: #fff;
+@border-color: #888;
+
+body, article, h2, button, div, section {
+    font-family: sans-serif;
+}
+
+ body {
+     background-color: @second-color;
+     width: 90%;
+     max-width: 800px;
+     margin-left: auto;
+     margin-right: auto;
+     padding-top: 10px;
+ }
+
+ h2 {
+     font-size: 17pt;
+     font-weight: bold;
+     padding-bottom: 5px;
+     text-align: center;
+ }
+
+ #chosen-chords {
+     font-size: 14pt;
+     font-weight: bold;
+     text-align: center;
+     padding-top: 5px;
+     padding-bottom: 6px;
+     margin-bottom: 3px;
+     border-radius: 4px;
+     border: 1px solid @border-color;
+     color: @text-color;
+     background-color: @first-color;
+ }
+
+.chord-list {
+    button {
+        font-size: 13pt;
+        background-color: @first-color;
+        border: 1px solid @border-color;
+        border-radius: 2px;
+        color: @text-color;
+        padding: 7px;
+        width: 60px;
+        margin: 5px;
+        font-weight: bold;
+    }
+    .ui-accordion-content {
+        text-align: center;
+    }
+    .ui-accordion-header {
+        font-weight: bold;
+        font-size: 14pt;
+        background-color: @text-color;
+    }
+    .ui-accordion-header-active {
+        color: @text-color;
+        background-color: @first-color;
+    }
+}
+
+.transposition {
+    text-align: center;
+    margin-top: 10px;
+    button {
+        font-size: 14pt;
+        height: 50px;
+        width: 48%;
+        margin-left: .5%;
+        margin-right: .5%;
+        background-color: @first-color;
+        border: 1px solid @border-color;
+        color: @text-color;
+        border-radius: 3px;
+        font-weight: bold;
+    }
+}
