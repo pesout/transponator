@@ -8,8 +8,8 @@ Created by Stepan Pesout
 var chords = new Array;
 
 function addChord(chord) {
-    if (chords.length == 10) {
-        alert("Můžete vybrat maximálně 10 akordů.");
+    if (chords.length == 50) {
+        alert("Můžete vybrat maximálně 50 akordů.");
         return false;
     }
     chords.push(chord);
@@ -41,33 +41,45 @@ function transposeChord(chord, shift) {
     }
 
     let chord_position = chords_all.indexOf(chord.toUpperCase());
-
     return chords_all[(chord_position + shift) % 12] + chord_suffix;
 }
 
 function transposition(shift) {
     let transposed = new Array;
+    let transposed_chords = "";
     if (chords.length == 0) return transposed;
     for (let i = 0; i < chords.length; i++)
-        transposed.push(transposeChord(chords[i], shift));
-    return transposed;
+        // transposed.push(transposeChord(chords[i], shift));
+        transposed_chords +=
+            "<span class='chord'>" + chords[i] + "</span>&nbsp;&rarr;&nbsp;<span class='chord'>" + transposeChord(chords[i], shift) + "</span><br />";
+    return transposed_chords;
 }
 
 function showTransposedChords() {
-    // document.getElementById('transposed-chords').innerHTML = "&nbsp;"
-    // for (let i = 1; i < 12; i++) {
-    //     document.getElementById('transposed-chords').innerHTML += i + " - " + transposition(i) + "<br>";
-    // }
-    let transposed = "";
-    for (let i = 1; i < 12; i++) {
-        transposed += i + " - " + transposition(i) + "\n";
+    if (chords.length == 0) {
+        alert('Musíte vybrat alespoň 1 akord');
+        return;
     }
-    alert(transposed);
+    document.getElementById('transposed-chords').innerHTML = ""
+    for (let i = 1; i < 12; i++) {
+        document.getElementById('transposed-chords').innerHTML +=
+            "<div class='transposed-chords-inner'>" +
+            "<h2>+" + i + " (-" + (12-i) + ")</h2>" +
+            transposition(i) +
+             "</div>";
+    }
+    document.getElementById('chord-form').style.display = "none";
+    document.getElementById('back').style.display = "inline";
+    document.getElementById('back2').style.display = "inline";
+}
+
+function goBack() {
+    document.getElementById('chord-form').style.display = "block";
+    document.getElementById('back').style.display = "none";
+    document.getElementById('back2').style.display = "none";
+    document.getElementById('transposed-chords').innerHTML = ""
 }
 
 $( function() {
-   $(".chord-list").accordion({
-       // collapsible: true,
-       // active: false
-    });
+   $(".chord-list").accordion();
  } );
