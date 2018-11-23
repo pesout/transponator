@@ -24,8 +24,8 @@ Created by Stepan Pesout
 	<script src="scripts.js"></script>
 </head>
 <body>
-	<article>
-		<!-- <h2></h2> -->
+	<button onclick="goBack()" id="back">Zpět</button>
+	<article id="chord-form">
 		<div id="chosen-chords">Vyberte akordy ze seznamu:</div>
 		<div class="chord-list">
 		 	<h3>Dur</h3>
@@ -79,11 +79,11 @@ Created by Stepan Pesout
 			<button onclick="showTransposedChords()">Transponovat</button>
 			<button onclick="removeLastChord()">Smazat</button>
 		</section>
-
+	</article>
 		<section>
 			<div id="transposed-chords"></div>
 		</section>
 
-	</article>
+	<button onclick="goBack()" id="back2">Zpět</button>
 </body>
 </html>
