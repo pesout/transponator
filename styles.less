@@ -14,25 +14,40 @@ body, article, h2, button, div, section {
     font-family: sans-serif;
 }
 
- body {
+body {
      background-color: @second-color;
      width: 90%;
      max-width: 800px;
      margin-left: auto;
      margin-right: auto;
      padding-top: 10px;
- }
-
- h2 {
-     font-size: 17pt;
+     padding-bottom: 10px;
      font-weight: bold;
+}
+
+#back, #back2 {
+    font-size: 14pt;
+    height: 50px;
+    width: 100%;
+    background-color: @first-color;
+    border: 1px solid @border-color;
+    color: @text-color;
+    border-radius: 3px;
+    display: none;
+}
+
+#back2 {
+    margin-top: 15px;
+}
+
+h2 {
+     font-size: 17pt;
      padding-bottom: 5px;
      text-align: center;
- }
+}
 
- #chosen-chords {
+#chosen-chords {
      font-size: 14pt;
-     font-weight: bold;
      text-align: center;
      padding-top: 5px;
      padding-bottom: 6px;
@@ -41,7 +56,7 @@ body, article, h2, button, div, section {
      border: 1px solid @border-color;
      color: @text-color;
      background-color: @first-color;
- }
+}
 
 .chord-list {
     button {
@@ -53,13 +68,11 @@ body, article, h2, button, div, section {
         padding: 7px;
         width: 60px;
         margin: 5px;
-        font-weight: bold;
     }
     .ui-accordion-content {
         text-align: center;
     }
     .ui-accordion-header {
-        font-weight: bold;
         font-size: 14pt;
         background-color: @text-color;
     }
@@ -75,13 +88,42 @@ body, article, h2, button, div, section {
     button {
         font-size: 14pt;
         height: 50px;
-        width: 48%;
-        margin-left: .5%;
-        margin-right: .5%;
+        width: 49%;
         background-color: @first-color;
         border: 1px solid @border-color;
         color: @text-color;
         border-radius: 3px;
-        font-weight: bold;
+        &:first-child {
+            margin-right: .2%;
+        }
+        &:nth-child(2) {
+            margin-left: .2%;
+        }
+    }
+}
+
+#transposed-chords {
+    text-align: center;
+    font-size: 25pt;
+    .chord {
+        text-align: center;
+        display: inline-block;
+        border: 1px solid black;
+        font-size: 13pt;
+        background-color: @first-color;
+        border: 1px solid @border-color;
+        border-radius: 2px;
+        color: @text-color;
+        padding: 7px;
+        width: 60px;
+        margin: 5px;
+        text-align: center;
+    }
+    .transposed-chords-inner {
+        background-color: @text-color;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+        border-radius: 4px;
+        margin-top: 15px;
+        padding: 20px;
     }
 }
